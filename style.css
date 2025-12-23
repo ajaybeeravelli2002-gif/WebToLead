@@ -35,4 +35,8 @@ form{
 input{
   color : green;
 }
+.g-recaptcha{
+    display: block;
+    margin:auto;
+}
 
