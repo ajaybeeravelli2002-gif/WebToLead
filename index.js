@@ -1,11 +1,19 @@
 
+let captchaValue=false;
+function beforesubmit(event){
 
-function beforesubmit(){
+if(captchaValue){
     let inputDate=document.querySelector("#Lead_date").value;
     let output= document.querySelector('.outputdate');
     let formattedDate=new Date(inputDate).toLocaleDateString("en-US");
     output.value=formattedDate;
     console.log(output.value);
+}
+    
+else{
+    alert("Please tick the captcha and then resubmit the form.");
+    event.preventDefault();
+}
 }
 function timestamp() { 
     var response = document.getElementById("g-recaptcha-response");
@@ -16,3 +24,6 @@ function timestamp() {
      } 
 } 
 setInterval(timestamp, 500);
+function setCaptcha(){
+    captchaValue=true;
+}

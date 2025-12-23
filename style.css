@@ -36,6 +36,8 @@ input{
   color : green;
 }
 .g-recaptcha{
-    margin-left:15%;
+    margin-top: 15px;
+    display:flex;
+    justify-content:center;
 }
 
